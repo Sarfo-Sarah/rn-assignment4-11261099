@@ -1,55 +1,123 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+# Home Component README
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Description
 
-## Get started
+This project contains a React Native component that displays a job listing interface. It includes featured jobs, popular jobs, and bottom icons for company logos. Users can search for job positions, view job details, and navigate to a login page.
 
-1. Install dependencies
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Components](#components)
+4. [Styles](#styles)
+5. [Assets](#assets)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/job-listing-app.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd job-listing-app
+   ```
+
+3. Install the dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+4. Start the development server:
 
    ```bash
-    npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+## Usage
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Import the `Home` component into your main application file:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   ```jsx
+   import Home from "./components/Home";
+   ```
 
-## Get a fresh project
+2. Use the `Home` component in your JSX:
 
-When you're ready, run:
+   ```jsx
+   const App = () => {
+     return <Home />;
+   };
 
-```bash
-npm run reset-project
-```
+   export default App;
+   ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Components
 
-## Learn more
+### Home
 
-To learn more about developing your project with Expo, look at the following resources:
+The `Home` component is the main component that displays the job listing interface. It uses several sub-components and elements from React Native and Expo Router.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+#### Structure
 
-## Join the community
+- **SafeAreaView**: Ensures the component respects the safe area boundaries of the device.
+- **StatusBar**: Manages the appearance of the status bar.
+- **ScrollView**: Allows for scrolling through the content.
+- **View**: Container for layout elements.
+- **Text**: Displays text.
+- **TextInput**: Input field for searching job positions.
+- **FlatList**: Renders lists of items (Featured Jobs and Popular Jobs).
+- **Link**: Navigates to different screens (e.g., Login page).
 
-Join our community of developers creating universal apps.
+### Data
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
-# rn-assignment4-11261099
-Repo for react native assignment 4
->>>>>>> ef04143487f7576280dcbc7fc6059a59d493d00c
+The component uses three arrays to hold job and icon data:
+
+1. **listItems**: Contains featured job details.
+2. **popularJobs**: Contains popular job details.
+3. **bottomIcons**: Contains image paths for bottom icons.
+
+## Styles
+
+The `Home` component uses `StyleSheet` from React Native to style the elements.
+
+### Style Definitions
+
+- **flexItem**: Flex container with column direction and gap.
+- **rowItem**: Flex container with row direction and space-around justification.
+- **largeFont**: Large bold font style.
+- **smallFont**: Small font style with a specific color.
+- **roundedImage**: Rounded image style with specific width and height.
+- **searchBackground**: Style for the search input background.
+
+## Assets
+
+The component uses local image assets located in the `../assets/images` directory. Ensure these images are available in the specified path:
+
+- `facebook.jpg`
+- `google.jpg`
+- `apple.jpg`
+- `burger.jpg`
+- `beats.jpg`
+- `react-logo.png`
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## Acknowledgments
+
+- [React Native](https://reactnative.dev/)
+- [Expo Router](https://expo.dev/)
+
+---
+
+For any queries or issues, please contact [yourname@example.com](mailto:yourname@example.com).
